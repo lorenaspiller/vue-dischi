@@ -9,3 +9,14 @@ body {
   min-height: 100vh;
   font-family: 'Lato', sans-serif;
 }
+
+header {
+  height: 80px;
+  background: #000;
+}
+
+header i {
+  padding: 15px 30px;
+  color: #1DB954;
+  font-size: 50px;
+}
