@@ -33,11 +33,12 @@
 
       <main>
         <div class="albums-row">
-          <div class="album">
-            <img class="album__image" src="https://www.onstageweb.com/wp-content/uploads/2018/09/bon-jovi-new-jersey.jpg" alt="">
-            <h3 class="album__title text-uppercase">New Jersey</h3>
-            <span class="album__author">Bon Jovi</span>
-            <span class="album__year">1988</span>
+          <div class="album" v-for="album in albums">
+            <img class="album__image" :src="album.poster" :alt="album.title">
+            <h3 class="album__title text-uppercase">{{album.title}}</h3>
+            <div class="album__genre">{{album.genre}}</div>
+            <div class="album__author">{{album.author}}</div>
+            <div class="album__year">{{album.year}}</div>
           </div>
         </div>
       </main>

@@ -21,7 +21,6 @@ header {
   align-items: center;
   height: 80px;
   background: #2e3a46;
-
 }
 
 header .logo {
@@ -38,25 +37,26 @@ header .logo {
 }
 
 .album {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  flex-basis: 200px;
+  text-align: center;
+  width: 200px;
   background-color: #2e3a46;
   border-radius: 10px;
   padding: 20px;
-  margin: 20px;
+  margin: 20px 20px 0 20px;
+}
+
+.album__title {
+  font-size: 18px;
+  height: 65px;
+  margin: 10px 0;
 }
 
 .album__image {
   width: 100%;
+  height: 150px;
+  object-fit: contain;
 }
 
 .album__author {
   margin: 10px 0;
-}
-
-.album__title {
-  margin-top: 10px;
 }
