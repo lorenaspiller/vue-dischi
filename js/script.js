@@ -13,12 +13,24 @@ BONUS 2: Ordinare i dischi per anno di uscita.
 var app = new Vue({
   el: '#app',
   data: {
-    albums: []
+    select: "",
+    albums: [],
+    genreSelected: [],
+  },
+  methods: {
+    filterGenre: function() {
+      this.albums.forEach((album) => {
+        if (this.genreSelected.includes(album.genre) == false) {
+          this.genreSelected.push(album.genre);
+        }
+      });
+    }
   },
   mounted: function() {
     axios.get("https://flynn.boolean.careers/exercises/api/array/music")
       .then((response)=>{
         this.albums = response.data.response;
+        this.filterGenre();
       });
   }
 })

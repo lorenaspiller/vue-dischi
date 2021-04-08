@@ -29,11 +29,15 @@
     <div id="app" class="container">
       <header>
         <img class="logo" src="img/download.png" alt="">
+        <select id="select-genre" name="" v-model="select">
+          <option value="all">All</option class="option">
+          <option v-for="item in genreSelected" :value="item" class="option">{{item}}</option>
+        </select>
       </header>
 
       <main>
         <div class="albums-row">
-          <div class="album" v-for="album in albums">
+          <div class="album" v-for="album in albums" v-if="select == album.genre || select == 'all' || select == ''">
             <img class="album__image" :src="album.poster" :alt="album.title">
             <h3 class="album__title text-uppercase">{{album.title}}</h3>
             <div class="album__genre">{{album.genre}}</div>
