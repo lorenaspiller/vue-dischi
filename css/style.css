@@ -8,15 +8,55 @@ body {
   background-color: #141922;
   min-height: 100vh;
   font-family: 'Lato', sans-serif;
+  color: #fff;
+}
+
+/* mix */
+.text-uppercase {
+  text-transform: uppercase;
 }
 
 header {
+  display: flex;
+  align-items: center;
   height: 80px;
-  background: #000;
+  background: #2e3a46;
+
 }
 
-header i {
-  padding: 15px 30px;
-  color: #1DB954;
-  font-size: 50px;
+header .logo {
+  width: 60px;
+  margin-left: 20px;
+}
+
+.albums-row {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding: 50px;
+}
+
+.album {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-basis: 200px;
+  background-color: #2e3a46;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px;
+}
+
+.album__image {
+  width: 100%;
+}
+
+.album__author {
+  margin: 10px 0;
+}
+
+.album__title {
+  margin-top: 10px;
 }
