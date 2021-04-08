@@ -37,7 +37,7 @@
 
       <main>
         <div class="albums-row">
-          <div class="album" v-for="album in albums" v-if="select == album.genre || select == 'all' || select == ''">
+          <div class="album" v-for="album in sortedYear" v-if="select == album.genre || select == 'all' || select == ''">
             <img class="album__image" :src="album.poster" :alt="album.title">
             <h3 class="album__title text-uppercase">{{album.title}}</h3>
             <div class="album__genre">{{album.genre}}</div>

@@ -32,5 +32,19 @@ var app = new Vue({
         this.albums = response.data.response;
         this.filterGenre();
       });
+  },
+  computed: {
+    sortedYear: function() {
+      function compare(a, b) {
+        if (a.year < b.year){
+          return -1;
+        }
+        if (a.year > b.year) {
+          return 1;
+        }
+        return 0;
+      }
+      return this.albums.sort(compare);
+    }
   }
 })
